@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../../extjs/4.2.1/resources/css/ext-all.css">
+<script type="text/javascript" src="../../extjs/4.2.1/bootstrap.js"></script>
+<script type="text/javascript" src="../../extjs/4.2.1/locale/ext-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.panel.Panel', {
+			title: 'panel with buttonGroup',
+			width: 300,
+			height: 200,
+			renderTo: document.body,
+			bodyPadding: 10,
+			html: 'HTML panel content',
+			tbar: [{
+				xtype: 'buttongroup',
+				columns: 3,
+				title: 'ClipBoard',
+				items: [{
+					text: 'Paste',
+					scale: 'large',
+					rowspan: 3,
+					iconCls: 'add',
+					iconAlign: 'top',
+					cls: 'btn-as-arrow'
+				}, {
+					xtype: 'splitbutton',
+					text: 'Menu Button',
+					scale: 'large',
+					rowspan: 3,
+					iconCls: 'add',
+					iconAlign: 'top',
+					arrowAlign: 'bottom',
+					menu: [{text: 'Menu Item 1'}]
+				}, {
+					xtype: 'splitbutton', text: 'Cut', iconCls: 'add16', menu: [{text: 'Cut Menu Item'}]
+				}, {
+		            text: 'Copy', iconCls: 'add16'
+		        },{
+		            text: 'Format', iconCls: 'add16'
+		        }]
+			}]
+		});
+	})
+</script>
+</head>
+<body>
+	
+</body>
+</html>

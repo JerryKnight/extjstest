@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../../extjs/4.2.1/resources/css/ext-all.css">
+<script type="text/javascript" src="../../extjs/4.2.1/bootstrap.js"></script>
+<script type="text/javascript" src="../../extjs/4.2.1/locale/ext-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.button.Cycle', {
+			showText: true,
+			prependText: 'View as ',
+			renderTo: Ext.getBody(),
+			menu: {
+				id: 'view-type-menu',
+				items: [{
+					text: 'text only',
+					iconCls: 'view-text',
+					checked: true
+				}, {
+					text: 'html',
+					iconCls: 'view-text'
+				}]
+			},
+			changeHandler: function(cycleBtn, activeItem) {
+				Ext.Msg.alert('Change View', activeItem.text);
+			}
+		});
+	})
+</script>
+</head>
+<body>
+	
+</body>
+</html>
