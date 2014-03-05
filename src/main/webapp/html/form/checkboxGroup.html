@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>checkboxGroup</title>
+<link rel="stylesheet" href="../../extjs/4.2.1/resources/css/ext-all.css">
+<script type="text/javascript" src="../../extjs/4.2.1/bootstrap.js"></script>
+<script type="text/javascript" src="../../extjs/4.2.1/locale/ext-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.form.Panel', {
+			title: 'Checkbox Group',
+			width: 300,
+			height: 150,
+			bodyPadding: 10,
+			renderTo: Ext.getBody(),
+			items: [{
+				xtype: 'checkboxgroup',
+				fieldLabel: 'Two Columns',
+				columns: 6,
+				vertical: true,
+				items: [
+				 	{ boxLabel: 'Item 1', name: 'rb', inputValue: '1'},
+				 	{ boxLabel: 'Item 2', name: 'rb', inputValue: '2', checked: true},
+				 	{ boxLabel: 'Item 3', name: 'rb', inputValue: '3'},
+				 	{ boxLabel: 'Item 4', name: 'rb', inputValue: '4'},
+				 	{ boxLabel: 'Item 5', name: 'rb', inputValue: '5'},
+				 	{ boxLabel: 'Item 6', name: 'rb', inputValue: '6'}
+				 ]
+			}]
+		});
+	})
+</script>
+</head>
+<body>
+	
+</body>
+</html>

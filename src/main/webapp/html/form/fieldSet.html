@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fieldSet</title>
+<link rel="stylesheet" href="../../extjs/4.2.1/resources/css/ext-all.css">
+<script type="text/javascript" src="../../extjs/4.2.1/bootstrap.js"></script>
+<script type="text/javascript" src="../../extjs/4.2.1/locale/ext-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.form.Panel', {
+			title: '使用 fieldset 的示例表单',
+			labelWidth: 75,
+			url: 'form/fieldSet',
+			frame: true,
+			bodyStyle: 'padding: 5px 5px 0',
+			width: 550,
+			renderTo: Ext.getBody(),
+			layout: 'column', //并排排列fieldsets
+			defaults: {
+				bodyPadding: 4
+			},
+			items: [{
+				//第 1 列中的  Fieldset - 通过toggle 按钮来 收缩/展开
+				xtype: 'fieldset',
+				columnWidth: 0.5,
+				title: '联系信息',
+				collapsibe: true,
+				dafaultType: 'textfield',
+				defaults: {anchor: '100%'},
+				layout: 'anchor',
+				items: [{
+					fieldLabel: '姓名',
+					name: 'name'
+				}, {
+					fieldLabel: '地址',
+					name: 'address'
+				}]
+			}, {
+				 // 第二列中的 Fieldset -  可以通过checkbox 来收缩/展开 , 默认收缩状态, 包含一个面板
+				 xtype: 'fieldset',
+				 title: '更多',
+				 columnWidth: 0.5,
+				 checkboxToggle: true,
+				 collapsed: true,
+				 layout: 'anchor',
+				 items: [{
+					 xtype: 'panel',
+					 anchor: '100%',
+					 title: '请填写更多信息',
+					 frame: true,
+					 height: 52
+				 }]
+			}]
+		});
+	})
+</script>
+</head>
+<body>
+	
+</body>
+</html>

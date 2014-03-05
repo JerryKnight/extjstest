@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fieldContainer</title>
+<link rel="stylesheet" href="../../extjs/4.2.1/resources/css/ext-all.css">
+<script type="text/javascript" src="../../extjs/4.2.1/bootstrap.js"></script>
+<script type="text/javascript" src="../../extjs/4.2.1/locale/ext-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.form.Panel', {
+			title: 'FieldContainer 示例',
+			width: 550,
+			bodyPadding: 10,
+			renderTo: Ext.getBody(),
+			
+			items: [{
+				xtype: 'fieldcontainer',
+				fieldLabel: '最近三份工作',
+				labelWidth: 100,
+				
+				//body 区域将包含三个文本域（text fields)
+				//水平排列, 通过可拖动的分隔符 splitter 分隔开
+				layout: 'hbox',
+				items: [{
+					xtype: 'textfield',
+					flex: 1
+				}, {
+					xtype: 'splitter'
+				}, {
+					xtype: 'textfield',
+					flex: 1
+				}, {
+					xtype: 'splitter'
+				}, {
+					xtype: 'textfield',
+					flex: 1
+				}]
+			}]
+		});
+	})
+</script>
+</head>
+<body>
+	
+</body>
+</html>
